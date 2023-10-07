@@ -12,21 +12,13 @@ builder.Configuration.AddIniFile(
     true
 );
 
-WeatherServiceConfiguration? openWeatherMapServiceConfiguration = builder
-    .Configuration.GetSection(
-        "OpenWeatherMapConfiguration"
-    )
-    .Get<WeatherServiceConfiguration>();
-
-if (openWeatherMapServiceConfiguration is null)
-{
-    throw new InvalidOperationException(
-        "OpenWeatherMapService configuration is missing."
-    );
-}
+builder.Services.AddSingleton(
+    builder.Configuration
+        .GetWeatherServiceConfiguration<OpenWeatherMapService>()
+);
 
 builder.Services.AddSingleton(
-    openWeatherMapServiceConfiguration
+    builder.Configuration.GetWeatherServiceConfiguration<WeatherApiService>()
 );
 
 builder.Services.AddSingleton<IWeatherService, OpenWeatherMapService>();

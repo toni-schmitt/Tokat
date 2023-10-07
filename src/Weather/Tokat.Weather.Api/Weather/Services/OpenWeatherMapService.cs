@@ -14,11 +14,17 @@ public class OpenWeatherMapService : IWeatherService
 
     public OpenWeatherMapService(
         IHttpClientFactory httpClientFactory,
-        WeatherServiceConfiguration weatherServiceConfiguration
+        IEnumerable<WeatherServiceConfiguration> weatherServiceConfigurations
     )
     {
         _httpClientFactory = httpClientFactory;
-        _weatherServiceConfiguration = weatherServiceConfiguration;
+
+        _weatherServiceConfiguration = weatherServiceConfigurations
+            .Single(
+                x => x.Service
+                     == GetType()
+                         .Name
+            );
     }
 
     public async Task<WeatherResponse?> GetWeatherAsync(string cityName)
