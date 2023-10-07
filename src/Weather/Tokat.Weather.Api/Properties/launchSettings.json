@@ -1,0 +1,15 @@
+﻿{
+    "profiles": {
+        "Tokat.Weather.Api": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": false,
+            "launchUrl": "swagger",
+            "applicationUrl": "https://localhost:9440",
+            "environmentVariables": {
+                "DOTNET_ENVIRONMENT": "Development",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    }
+}
