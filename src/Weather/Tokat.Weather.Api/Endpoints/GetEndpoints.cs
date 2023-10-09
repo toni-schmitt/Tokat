@@ -12,7 +12,7 @@ public static class GetEndpoints
         endpoints.MapGet(
                 "/weather/{{cityName}}",
                 (
-                    [FromRoute] string cityName,
+                    string cityName,
                     [FromServices] IWeatherService service
                 ) => GetWeatherAsync(
                     cityName,

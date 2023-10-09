@@ -21,6 +21,7 @@ builder.Services.AddSingleton(
 );
 
 builder.Services.AddSingleton<IWeatherService, OpenWeatherMapService>();
+builder.Services.AddSingleton<IWeatherService, WeatherApiService>();
 builder.Services.AddHttpClient();
 builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();
