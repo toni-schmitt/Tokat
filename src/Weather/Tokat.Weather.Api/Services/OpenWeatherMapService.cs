@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
-namespace Tokat.Weather.Api.Weather.Services;
+namespace Tokat.Weather.Api.Services;
 
 [SuppressMessage(
     "ReSharper",

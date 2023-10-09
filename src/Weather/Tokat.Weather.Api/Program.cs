@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
-using Tokat.Weather.Api.Weather;
-using Tokat.Weather.Api.Weather.Services;
+using Tokat.Weather.Api.Endpoints;
+using Tokat.Weather.Api.Services;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(
     args
@@ -37,31 +36,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
-app.MapGet(
-        "/weather/{city}",
-        async ([FromRoute] string city, IWeatherService weatherService) =>
-        {
-            WeatherResponse? weather = await weatherService.GetWeatherAsync(
-                city
-            );
-
-            // ReSharper disable once ConvertIfStatementToReturnStatement - happy path always at the end :)
-            if (weather is null)
-            {
-                return Results.NotFound();
-            }
-
-            return Results.Ok(
-                weather
-            );
-        }
-    )
-    .WithName(
-        "GetWeatherForecastForCity"
-    )
-    .WithDescription(
-        "Get the weather forecast for a given city."
-    )
-    .WithOpenApi();
+app.MapGetEndpoints();
 
 app.Run();

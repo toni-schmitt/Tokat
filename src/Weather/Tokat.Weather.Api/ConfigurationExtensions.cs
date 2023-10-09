@@ -1,14 +1,14 @@
-using Tokat.Weather.Api.Weather.Services;
+using Tokat.Weather.Api.Services;
 
 // ReSharper disable once CheckNamespace - this namespace is intended
 namespace Microsoft.Extensions.Configuration;
 
 public static class ConfigurationExtensions
 {
-    public static WeatherServiceConfiguration GetWeatherServiceConfiguration<
-        TServiceImplementation>(
-        this IConfiguration configuration
-    )
+    public static WeatherServiceConfiguration
+        GetWeatherServiceConfiguration<TServiceImplementation>(
+            this IConfiguration configuration
+        )
         where TServiceImplementation : class, IWeatherService
     {
         Type serviceImplementationType = typeof(TServiceImplementation);

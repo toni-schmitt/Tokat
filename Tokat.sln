@@ -4,6 +4,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Weather", "Weather", "{E901
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tokat.Weather.Api", "src\Weather\Tokat.Weather.Api\Tokat.Weather.Api.csproj", "{CEAA3EF9-C86B-4D2D-A53E-88C342778DD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tokat.Weather.Api.UnitTests", "src\Weather\Tokat.Weather.Api.UnitTests\Tokat.Weather.Api.UnitTests.csproj", "{8B9A4376-D13A-474F-9471-B6DC4544F9B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +13,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CEAA3EF9-C86B-4D2D-A53E-88C342778DD0} = {E90138D5-E5A1-4042-8944-54BF7706EC49}
+		{8B9A4376-D13A-474F-9471-B6DC4544F9B0} = {E90138D5-E5A1-4042-8944-54BF7706EC49}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CEAA3EF9-C86B-4D2D-A53E-88C342778DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CEAA3EF9-C86B-4D2D-A53E-88C342778DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEAA3EF9-C86B-4D2D-A53E-88C342778DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEAA3EF9-C86B-4D2D-A53E-88C342778DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9A4376-D13A-474F-9471-B6DC4544F9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9A4376-D13A-474F-9471-B6DC4544F9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9A4376-D13A-474F-9471-B6DC4544F9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9A4376-D13A-474F-9471-B6DC4544F9B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
