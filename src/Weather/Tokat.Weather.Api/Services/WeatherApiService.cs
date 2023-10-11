@@ -63,12 +63,16 @@ public class WeatherApiService : IWeatherService
         "ReSharper",
         "UnusedAutoPropertyAccessor.Local"
     )]
+    [SuppressMessage(
+        "ReSharper",
+        "AutoPropertyCanBeMadeGetOnly.Local"
+    )]
     private class WeatherApiWeatherResponse
     {
         [JsonPropertyName(
             "current"
         )]
-        public WeatherApiWeatherCurrent Current { get; } = null!;
+        public WeatherApiWeatherCurrent Current { get; set; } = null!;
     }
 
     [SuppressMessage(
